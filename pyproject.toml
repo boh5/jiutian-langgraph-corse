@@ -1,0 +1,27 @@
+[project]
+name = "jiutian-langgraph-corse"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "langchain>=0.3.26",
+    "langchain-openai>=0.3.28",
+    "langchain-tavily>=0.2.8",
+    "langgraph>=0.5.3",
+    "openai>=1.96.1",
+    "pydantic>=2.11.7",
+    "python-dotenv>=1.1.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "chatbot",
+    "data_agent",
+]
+
+[tool.ruff]
+exclude = [
+    "docs",
+]

@@ -1,0 +1,21 @@
+[project]
+name = "chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipython>=9.4.0",
+    "langchain-core>=0.3.69",
+    "langchain-mcp-adapters>=0.1.9",
+    "langchain-openai>=0.3.28",
+    "langchain-tavily>=0.2.8",
+    "langgraph>=0.5.3",
+    "langgraph-cli[inmem]>=0.3.4",
+    "langsmith>=0.4.6",
+    "matplotlib>=3.10.3",
+    "pandas>=2.3.1",
+    "pydantic>=2.11.7",
+    "python-dotenv>=1.1.1",
+    "seaborn>=0.13.2",
+]

@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:latest # 官方镜像
+    container_name: mysql8-server
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456" # 必须修改为复杂密码
+      MYSQL_DATABASE: "data_agent" # 初始化数据库
+      MYSQL_USER: "data_agent" # 应用用户
+      MYSQL_PASSWORD: "123456" # 应用用户密码
+    ports:
+      - "3306:3306" # 暴露端口：宿主机3306 → 容器3306
+    volumes:
+      - ./data/data:/var/lib/mysql # 数据持久化目录
+      - ./data/conf:/etc/mysql/conf.d # 自定义配置文件目录
+      - ./data/logs:/var/log/mysql # 日志目录
