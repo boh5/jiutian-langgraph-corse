@@ -122,7 +122,7 @@ def python_inter(py_code):
 
     try:
         return str(eval(py_code, g))
-    except Exception as e:
+    except Exception:
         global_vars_before = set(g.keys())
         try:
             exec(py_code, g)
